@@ -45,3 +45,6 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+body {
+  transition: background-color 2s ease;
+}
