@@ -1,0 +1,19 @@
+// Example: Save to Firestore
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+const db = getFirestore();
+
+async function saveToFirebase(name, email, message) {
+  try {
+    await addDoc(collection(db, "contacts"), {
+      name,
+      email,
+      message,
+      createdAt: new Date()
+    });
+    alert("Message sent successfully!");
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    alert("Something went wrong!");
+  }
+}
