@@ -51,11 +51,19 @@ body {
 body {
   background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
   background-size: 400% 400%;
-  animation: gradientBG 1s ease infinite;
+  animation: gradientBG 6s ease infinite;
 }
 
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  transition: background-color 2s ease; /* smooth transition */
 }
