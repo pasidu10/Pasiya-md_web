@@ -89,5 +89,5 @@ body {
   color: white;
   text-align: center;
   padding-top: 100px;
-  transition: background-color 1s ease; /* smooth transition */
+  transition: background-color 2s ease; /* smooth transition */
 }
