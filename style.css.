@@ -1,0 +1,47 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: #fff;
+}
+header {
+    background-color: #0a3020;
+    padding: 10px 20px;
+}
+header h1 {
+    margin: 0;
+}
+nav a {
+    color: #9f9;
+    margin-right: 15px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    text-decoration: underline;
+}
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+.login-container input, .login-container button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.content {
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
