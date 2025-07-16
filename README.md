@@ -18,3 +18,15 @@ This is a simple business website for PASIYA-MD, built using HTML, CSS, and JS.
 4. Site will be live within seconds (e.g., pasiya-md.vercel.app)
 
 You can also host with GitHub Pages.
+
+# PASIYA-MD Admin Panel
+
+This is a basic admin panel for PASIYA-MD site.
+
+## Pages:
+- login.html (Username: admin | Password: pasiya123)
+- dashboard.html (View registered users)
+- leads.html (Track WhatsApp clicks)
+
+## Hosting Suggestion:
+Host on Netlify or Vercel same as main site.
