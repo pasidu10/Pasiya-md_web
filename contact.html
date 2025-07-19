@@ -1,48 +1,95 @@
+<!-- 👇 Paste this into your contact section (inside <body>) -->
+<section class="contact-section">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out for inquiries, projects or just to say hi!</p>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PASIYA-MD | Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body <img src="logo.png" alt="PASIYA-MD Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="active">Contact</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
-    <section class="content">
-        <h2>Contact Us</h2>
-        <p>You can contact us through WhatsApp.</p>
-        <a href="https://wa.me/94766359869" class="btn">Message on WhatsApp</a>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        &copy; 2025 PASIYA-MD. All rights reserved.
-    </footer>
-</body>
-</html>
-<style></
-button {
-  background-color: #32cd32; /* neon green */
-  color: white;
-  padding: 12px 30px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #32cd32, 0 0 20px #32cd32, 0 0 40px #00ff00;
-  transition: box-shadow 0.3s ease-in-out;
-}
+  <form class="contact-form">
+    <input type="text" placeholder="pasidu sampath" required />
+    <input type="email" placeholder="pasidusampath808@gmail.com" required />
+    <textarea placeholder="welcome " required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section><style>
+  .contact-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom right, #0a0a0a, #001a1a);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
 
-button:hover {
-  box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
-}
+  .contact-section h2 {
+    font-size: 36px;
+    background: linear-gradient(90deg, #00ffcc, #33ff00, #00ffe7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorFlow 6s linear infinite;
+  }
+
+  .contact-section p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #121212;
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.1);
+    animation: slideUp 1.5s ease;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #1a1a1a;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#1a1a1a, #1a1a1a),
+                      linear-gradient(90deg, #00ffcc, #33ff00, #00ffe7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: white;
+    resize: none;
+  }
+
+  .contact-form button {
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #00ffcc, #33ff00, #00ffe7);
+    border: none;
+    cursor: pointer;
+    animation: glowPulse 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  }
+
+  @keyframes colorFlow {
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0 }
+    100% { transform: translateY(0); opacity: 1 }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 10px #00ffe7; }
+    50% { box-shadow: 0 0 20px #00ffcc; }
+  }
+      </style>
