@@ -100,3 +100,16 @@ form input:nth-child(7) { --delay: 0.7s; }
     transform: translateY(0);
   }
 }
+```css
+@keyframes colorChange {
+  0% { color: #8ee1a1; }
+  50% { color: #55c96a; }
+  100% { color: #8ee1a1; }
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  animation: colorChange 2s infinite;
+}
