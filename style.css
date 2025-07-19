@@ -109,3 +109,67 @@ form input:nth-child(7) { --delay: 0.7s; }
 .navbar ul li a {
   animation: color-change 3s infinite;
 }
+<style>
+  body {
+    background-color: #0a0a0a;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    padding: 20px;
+  }
+
+  .colorful-input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: #1a1a1a;
+    color: white;
+    border: 2px solid;
+    border-image: linear-gradient(270deg, #ff00cc, #3333ff, #00ffee, #ffcc00, #ff00cc);
+    border-image-slice: 1;
+    animation: animated-border 6s linear infinite;
+    box-shadow: 0 0 12px rgba(255, 0, 204, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .colorful-input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+
+  @keyframes animated-border {
+    0% {
+      border-image-source: linear-gradient(0deg, #ff00cc, #3333ff, #00ffee, #ffcc00, #ff00cc);
+    }
+    100% {
+      border-image-source: linear-gradient(360deg, #ff00cc, #3333ff, #00ffee, #ffcc00, #ff00cc);
+    }
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffee, #ffcc00);
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: glowPulse 3s ease-in-out infinite;
+    transition: transform 0.2s ease;
+  }
+
+  .submit-button:hover {
+    transform: scale(1.03);
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 15px #ff00cc;
+    }
+    50% {
+      box-shadow: 0 0 25px #00ffee;
+    }
+  }
