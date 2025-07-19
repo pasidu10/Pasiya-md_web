@@ -99,16 +99,13 @@ form input:nth-child(7) { --delay: 0.7s; }
     opacity: 1;
     transform: translateY(0);
   }
-}
-@keyframes colorChange {
-  0% { color: #8ee1a1; }
-  50% { color: #55c96a; }
-  100% { color: #8ee1a1; }
+@keyframes color-change {
+  0% { color: #0000FF; }    /* නිල් */
+  33% { color: #008000; }   /* කොළ */
+  66% { color: #FF0000; }   /* රතු */
+  100% { color: #0000FF; }  /* නැවත නිල් */
 }
 
 .navbar ul li a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  animation: colorChange 1s infinite;
+  animation: color-change 3s infinite;
 }
