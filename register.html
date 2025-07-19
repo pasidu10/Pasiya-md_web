@@ -175,3 +175,54 @@
 
 </body>
 </html>
+
+<form id="payment-form">
+  <h2>Make a Payment</h2>
+
+  <label>Name:</label>
+  <input type="text" name="name" required>
+
+  <label>Email or Phone:</label>
+  <input type="text" name="contact" required>
+
+  <label>Country:</label>
+  <input type="text" name="country" required>
+
+  <label>Choose Plan:</label>
+  <select name="plan" required>
+    <option value="basic">Basic</option>
+    <option value="premium">Premium</option>
+    <option value="enterprise">Enterprise</option>
+  </select>
+
+  <label>Payment Method:</label>
+  <select name="payment" required>
+    <option value="paypal">PayPal</option>
+    <option value="stripe">Stripe</option>
+    <option value="payhere">PayHere (LKA)</option>
+    <option value="crypto">Crypto (USDT)</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <button type="submit">Continue</button>
+</form>
+
+<script>
+  document.getElementById('payment-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(this);
+    const method = data.get('payment');
+
+    if (method === 'paypal') {
+      window.location.href = 'https://www.paypal.me/yourlink';
+    } else if (method === 'stripe') {
+window.location.href = 'https://buy.stripe.com/test_abc123';
+    } else if (method === 'payhere') {
+      window.location.href = 'https://payhere.lk/pay/yourlink';
+    } else if (method === 'crypto') {
+      alert("Send USDT to: binancepay@yourmail.com");
+    } else if (method === 'bank') {
+      alert("Bank Details:\nAcc: 1234567890\nBank: BOC\nName: P. Sampath");
+    }
+  });
+</script>
