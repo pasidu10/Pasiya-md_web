@@ -91,5 +91,5 @@ form input:nth-child(7) { --delay: 0.7s; }
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  animation: colorChange 2s infinite;
+  animation: colorChange 1s infinite;
 }
