@@ -27,3 +27,98 @@
     </footer>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PASIYA-MD</title>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #001a1a);
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00ffe7, #00ff73, #33ff00, #ffe600, #ff0080, #00ffe7);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: flowColor 5s linear infinite;
+    }
+
+    @keyframes flowColor {
+      0% { background-position: 0% }
+      100% { background-position: 400% }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .subtext {
+      font-size: 20px;
+      color: #ddd;
+      margin-top: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .whatsapp-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #00ff73, #00ffe7);
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 115, 0.5);
+      cursor: pointer;
+      animation: glowPulse 3s ease-in-out infinite;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 115, 0.8);
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow: 0 0 10px #00ff73;
+      }
+      50% {
+        box-shadow: 0 0 20px #00ffe7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Welcome to PASIYA-MD</h1>
+    <div class="subtext">Your Smart WhatsApp Bot Assistant</div>
+    <a href="https://wa.me/94766359869" target="_blank">
+      <button class="whatsapp-btn">Start on WhatsApp</button>
+    </a>
+  </div>
+
+</body>
+</html>
