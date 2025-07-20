@@ -93,3 +93,54 @@
     50% { box-shadow: 0 0 20px #00ffcc; }
   }
       </style>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+
+  <style>
+    body {
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-description {
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+      text-align: center;
+      animation: softColorFlow 8s ease-in-out infinite;
+      text-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+      max-width: 90%;
+    }
+
+    @keyframes softColorFlow {
+      0%   { color: #ffffff; }
+      20%  { color: #00ffd5; }
+      40%  { color: #40ff00; }
+      60%  { color: #00bfff; }
+      80%  { color: #ff00ff; }
+      100% { color: #ffffff; }
+    }
+  </style>
+</head>
+<body>
+
+  <p class="contact-description">
+    Feel free to reach out for inquiries, projects or just to say hi!
+  </p>
+
+</body>
+</html>
