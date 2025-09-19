@@ -1,41 +1,26 @@
-const chatBox = document.getElementById('chat');
-const chatForm = document.getElementById('chat-form');
-const msgInput = document.getElementById('msg');
 
-function botReply(message) {
-  // Simple fixed replies for demo
-  const msgLower = message.toLowerCase();
 
-  if (msgLower.includes('hi') || msgLower.includes('hello')) {
-    return "Hello! How can I assist you today?";
-  } else if (msgLower.includes('help')) {
-    return "Sure! Ask me anything about PASIYA AI Chatbot.";
-  } else if (msgLower.includes('bot')) {
-    return "I am PASIYA AI Chatbot, your virtual assistant.";
-  } else {
-    return "Sorry, I didn't get that. Please ask something else.";
-  }
-}
+const chatWindow = document.getElementById('chat-window');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
 
 function appendMessage(text, className) {
-  const li = document.createElement('li');
-  li.className = className;
-  li.textContent = text;
-  chatBox.appendChild(li);
-  chatBox.scrollTop = chatBox.scrollHeight;
+  const msgDiv = document.createElement('div');
+  msgDiv.classList.add(className);
+  msgDiv.textContent = text;
+  chatWindow.appendChild(msgDiv);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-chatForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const userMsg = msgInput.value.trim();
-  if (!userMsg) return;
+sendBtn.addEventListener('click', () => {
+  const text = userInput.value.trim();
+  if (!text) return;
 
-  appendMessage(userMsg, 'user');
-  msgInput.value = '';
+  appendMessage(text, 'user-message');
+  userInput.value = '';
 
-  // Simulate bot typing delay
+  // Simulate bot typing and reply
   setTimeout(() => {
-    const reply = botReply(userMsg);
-    appendMessage(reply, 'bot');
+    appendMessage('ඔය ප්‍රශ්නය ගැන හොඳ පිළිතුර නැද්ද බලන්නම්...', 'bot-message');
   }, 800);
 });
