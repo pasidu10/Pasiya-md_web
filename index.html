@@ -71,7 +71,7 @@
   </div>
 
   <script>
-    // Load saved counter or start at 0
+    // Load saved counter or start at 85000
     let count = parseInt(localStorage.getItem("botCounter")) || 85000;
     const counterElement = document.getElementById("counter");
 
@@ -84,7 +84,7 @@
     // First display
     counterElement.textContent = count;
 
-    // Auto increment every 5.5 seconds
+    // Auto increment every 0.5 seconds
     setInterval(updateCounter, 7500);
 
     // Animated background with stars
