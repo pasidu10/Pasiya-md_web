@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PASIYA-MD Bot Deployment Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+    .counter-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+    .label {
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+    .number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    .warning {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 PASIYA-MD Deployment Tracker</h1>
+  <div class="counter-box"> <div class="label">Total Bots Deployed</div>
+    <div id="deployed" class="number">92000</div>
+    <div class="label">Active Bots</div>
+    <div id="active" class="number">91000</div>
+    <div id="warning" class="warning">⚠️ RAM FULL – BOT DEPLOYMENT STOPPED</div>
+  </div>
+
+  <script>
+    let deployed = 92000;
+    let active = 91000;
+    const deployedEl = document.getElementById("deployed");
+    const activeEl = document.getElementById("active");
+    const warningEl = document.getElementById("warning");
+
+    const interval = 2000; // every 2 seconds
+
+    function updateCounts() {
+      if (deployed >= 150000) {
+        warningEl.style.display = "block";
+        return;
+      }
+
+      deployed++;
+      active += Math.floor(Math.random() * 2) + 1; // active count increases faster now
+
+      deployedEl.textContent = deployed.toLocaleString();
+      activeEl.textContent = active.toLocaleString();
+    }
+
+    setInterval(updateCounts, interval);
+  </script>
+</body>
+</html>
