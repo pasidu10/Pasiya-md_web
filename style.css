@@ -1,0 +1,87 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #141414; /* dark background */
+  color: #eee;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px rgba(255,204,0,0.5);
+}
+
+.prices, .combo, .followers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.price-item {
+  position: relative;
+  background: #222;
+  padding: 25px 20px;
+  border-radius: 15px;
+  border: 2px solid #333;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px 5px #ffcc00, 0 0 40px 10px rgba(255,204,0,0.6);
+}
+
+.price-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.price-value {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #ffcc00;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #222;
+  background: #ffcc00;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background: #ffd633;
+  color: #000;
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px rgba(255,204,0,0.5);
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .price-item {
+    padding: 20px 15px;
+  }
+  .btn {
+    padding: 8px 16px;
+  }
+}
