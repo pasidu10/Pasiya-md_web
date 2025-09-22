@@ -1,7 +1,7 @@
 let botCount = 100000;
 const maxCount = 150000;
 const increment = 1000;
-const interval = 2500; // 2.5 seconds
+const interval = 2500; // 1.5 seconds
 
 const botCountDisplay = document.getElementById('botCount');
 const stopMessage = document.getElementById('stopMessage');
