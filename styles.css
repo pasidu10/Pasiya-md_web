@@ -1,0 +1,270 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navbar */
+nav {
+  background: #161b22;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav .logo {
+  color: #58a6ff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #58a6ff;
+}
+
+/* Hero Section - Home */
+.hero {
+  background: linear-gradient(90deg, #161b22 60%, #0d1117 40%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  color: #58a6ff;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #58a6ff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #c9d1d9;
+}
+
+.hero-text .btn {
+  background: #238636;
+  color: #fff;
+  padding: 12px 30px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.hero-text .btn:hover {
+  background: #2ea043;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(35,134,54,0.5);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-15px) }
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 40px 0 30px;
+  color: #58a6ff;
+  font-weight: 700;
+}
+
+/* Bot Boxes Grid */
+.bot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.bot-box {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #c9d1d9;
+  position: relative;
+  overflow: hidden;
+}
+
+.bot-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px #58a6ff;
+}
+
+.bot-box h3 {
+  color: #58a6ff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.bot-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #c9d1d9cc;
+}
+
+/* Animations for bot-box */
+.bot-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #58a6ff, #238636, #2ea043, #58a6ff);
+  animation: rotateGradient 4s linear infinite;
+  filter: blur(30px);
+  opacity: 0.3;
+  z-index: 0;
+  border-radius: 15px;
+}
+
+.bot-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  background: #161b22;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  color: #c9d1d9;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  background: #238636;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #2ea043;
+}
+
+/* Footer */
+footer {
+  background: #161b22;
+  text-align: center;
+  padding: 15px 10px;
+  color: #8b949e;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 0 #238636;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul li {
+    margin-bottom: 5px;
+  }
+  .bot-grid {
+    grid-template-columns: 1fr;
+  }
+  }
