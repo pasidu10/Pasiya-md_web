@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #00ff88;
+}
+
+.status-text {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #ccc;
+  animation: fade 2s infinite;
+}
+
+.powered {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
