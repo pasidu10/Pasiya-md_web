@@ -1,15 +1,7 @@
-const statusText = document.getElementById('statusText');
-const messages = [
-  "Deploying bot...",
-  "Connecting to PASIYA-MD Server...",
-  "Setting up instance...",
-  "Finalizing deployment...",
-  "Bot deployed successfully!",
-  "Waiting for next instance..."
-];
-let index = 0;
+let count = 798000;
+const counter = document.getElementById('counter');
 
 setInterval(() => {
-  statusText.textContent = messages[index];
-  index = (index + 1) % messages.length;
-}, 2000);
+  count++;
+  counter.textContent = count.toLocaleString();
+}, 2000); // Every 2 seconds increase
