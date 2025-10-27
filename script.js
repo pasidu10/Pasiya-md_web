@@ -1,10 +1,15 @@
-// simple fade-in on scroll
-const revealElements = document.querySelectorAll('.hero, .about-preview');
-window.addEventListener('scroll', () => {
-  revealElements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add('visible');
-    }
-  });
-});
+const statusText = document.getElementById('statusText');
+const messages = [
+  "Deploying bot...",
+  "Connecting to PASIYA-MD Server...",
+  "Setting up instance...",
+  "Finalizing deployment...",
+  "Bot deployed successfully!",
+  "Waiting for next instance..."
+];
+let index = 0;
+
+setInterval(() => {
+  statusText.textContent = messages[index];
+  index = (index + 1) % messages.length;
+}, 2000);
