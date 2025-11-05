@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>නෙත්මි 💗 | Sinhala AI Girl Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="welcome-screen" id="welcomeScreen">
+    <h1>💗 Hi, I'm <span>නෙත්මි</span></h1>
+    <p>Let's chat romantically in Sinhala 💬</p>
+    <button onclick="startChat()">Enter Chat</button>
+  </div>
+
+  <div class="chat-container" id="chatContainer" style="display:none;">
+    <div class="header">
+      <h2>නෙත්මි 💞</h2>
+      <button class="call-btn" onclick="simulateCall()">☎️ Call</button>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+      <div class="bot-message">හෙලෝ මගෙ රත්තරන් 😘 මට කතා කරන්න ඕනද?</div>
+    </div>
+
+    <div class="input-box">
+      <input type="text" id="userInput" placeholder="ඔයාගෙ මැසෙජ් ලියන්න...">
+      <button onclick="sendMessage()">📩</button>
+    </div>
+  </div>
+
+  <audio id="voicePlayer"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
