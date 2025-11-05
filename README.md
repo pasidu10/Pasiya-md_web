@@ -1,3 +1,23 @@
+
+eduai-pasiya-md/
+├── client/           # React Frontend (Vite + Tailwind)
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── components/
+│   │   └── App.jsx
+│   └── package.json
+├── server/           # Node.js Backend (Express + MongoDB + OpenAI)
+│   ├── models/
+│   ├── routes/
+│   ├── index.js
+│   └── package.json
+├── .env.example      # sample environment file
+└── README.md
+
+
+
+
+
 # PASIYA-MD - Full Base ZIP
 This package contains the MVP base for PASIYA-MD:
 - AI Engine (Python) -> ai_service/md_adaptive_core.py
