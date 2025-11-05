@@ -1,0 +1,306 @@
+/* =========================================================
+   🌐 EduAI Pro | PASIYA-MD TEAM - Global Website Design
+   Modern | Glass | Neon | Animated | Responsive
+   ========================================================= */
+:root {
+  --bg-gradient: linear-gradient(135deg, #05091a, #0f172a, #1e3a8a);
+  --glass: rgba(255, 255, 255, 0.07);
+  --text: #e2e8f0;
+  --text-light: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-2: #6366f1;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --transition: 0.3s ease;
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* 🌙 Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   🔹 Navbar
+   ========================================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   🔹 Hero / Home Page
+   ========================================================= */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  animation: fadeIn 1s ease;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.hero .btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   🔹 Cards (Subjects / Papers)
+   ========================================================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   🔹 Buttons
+   ========================================================= */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: var(--accent-2);
+}
+
+/* =========================================================
+   🔹 Forms (Login / Register)
+   ========================================================= */
+.form-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, textarea {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+/* =========================================================
+   🔹 Chat Box
+   ========================================================= */
+.chat-box {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  box-shadow: var(--shadow);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  padding-right: 10px;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  max-width: 80%;
+  line-height: 1.5;
+  animation: fadeInUp 0.5s ease;
+}
+
+.message.user {
+  background: var(--accent-2);
+  align-self: flex-end;
+  color: white;
+}
+
+.message.bot {
+  background: rgba(255, 255, 255, 0.09);
+  align-self: flex-start;
+  color: var(--text);
+}
+
+/* =========================================================
+   🔹 Admin Dashboard
+   ========================================================= */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 25px;
+  padding: 20px;
+}
+
+.sidebar {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar h3 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 0;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: var(--accent);
+}
+
+.dashboard-content {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* =========================================================
+   🔹 Footer
+   ========================================================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   ✨ Animations
+   ========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   📱 Responsive
+   ========================================================= */
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size:
