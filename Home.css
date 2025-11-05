@@ -1,0 +1,63 @@
+/* src/pages/Home.css */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f4f9ff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a58ca;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: #0a58ca;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(180deg, #dceeff, #ffffff);
+}
+
+.hero h2 {
+  color: #0a58ca;
+  font-size: 2rem;
+}
+
+.hero span {
+  color: #084298;
+}
+
+.explore-btn {
+  background-color: #0a58ca;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
