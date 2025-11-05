@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PASIYA-MD BOT LIVE COUNTER</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #002a32, #00ffd5);
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-shadow: 0 0 20px #00ffd5;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px #00ffd5; }
+      to { text-shadow: 0 0 40px #00aaff; }
+    }
+
+    .counter-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 25px rgba(0,255,213,0.4);
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0,255,213,0.8);
+    }
+
+    .number {
+      font-size: 2rem;
+      color: #00ffd5;
+      text-shadow: 0 0 15px #00ffd5;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 PASIYA-MD MINI BOT LIVE COUNTER 🔥</h1>
+
+  <div class="counter-box">
+    <div class="box">
+      <h2>Total Deployments</h2>
+      <div class="number" id="deploys">1000000</div>
+    </div>
+    <div class="box">
+      <h2>Daily Deploys</h2>
+      <div class="number" id="daily">540</div>
+    </div>
+    <div class="box">
+      <h2>Countries Active</h2>
+      <div class="number" id="countries">25</div>
+    </div>
+    <div class="box">
+      <h2>Active Bots</h2>
+      <div class="number" id="active">750000</div>
+    </div>
+  </div>
+
+  <footer>
+    <span>POWERED BY PASIYA-MD MINI WHATSAPP BOT</span>
+    <span>Developer: PASIYA-MD TEAM</span>
+    <span>OWNER: +94 76 635 9869 / +93 76 635 9869</span>
+  </footer>
+
+  <script>
+    let deploys = 1000000;
+    let daily = 540;
+    let countries = 25;
+    let active = 750000;
+    let daysSinceStart = 0;
+    let seconds = 0;
+
+    function updateCounters() {
+      deploys += 1;
+      daily += 1;
+      active += 2;
+      seconds++;
+
+      if (seconds % 172800 === 0) { // every 2 days
+        countries += 1;
+      }
+
+      document.getElementById('deploys').textContent = deploys.toLocaleString();
+      document.getElementById('daily').textContent = daily.toLocaleString();
+      document.getElementById('countries').textContent = countries;
+      document.getElementById('active').textContent = active.toLocaleString();
+    }
+
+    setInterval(updateCounters, 1000);
+  </script>
+</body>
+</html>
