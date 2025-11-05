@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PASIYA-MD | Live Bot Stats</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background: radial-gradient(circle at top left, #001f3f, #003366, #001933);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00bfff;
+  }
+  .counter-box {
+    background: rgba(0, 0, 40, 0.7);
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #0077ff;
+    border: 2px solid #00aaff;
+    width: 320px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+  }
+  .counter-box:hover {
+    transform: scale(1.05);
+  }
+  .counter-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00ffff;
+  }
+  .counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00bfff;
+    text-shadow: 0 0 10px #0099ff;
+  }
+  footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    opacity: 0.8;
+    text-shadow: 0 0 5px #00aaff;
+  }
+  .countries {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #66ccff;
+    text-shadow: 0 0 5px #0077ff;
+  }
+</style>
+</head>
+<body>
+  <h1>PASIYA-MD Live Bot Stats</h1>
+
+  <div class="counter-box">
+    <h2>Deployed Bots (Total)</h2>
+    <div id="total" class="counter">0</div>
+  </div>
+
+  <div class="counter-box">
+    <h2>Today's Deployments</h2>
+    <div id="daily" class="counter">0</div>
+  </div>
+
+  <div class="counter-box">
+    <h2>Active Countries</h2>
+    <div id="countries" class="counter">0</div>
+    <div class="countries" id="countryList"></div>
+  </div>
+
+  <footer>
+    <p>POWERED_BY <b>PASIYA-MD MINI WHATSAPP BOT</b><br>
+    DEVELOPER: <b>PASIYA-MD TEAM</b> | OWNER: <b>+94766359869 / +93766359869</b></p>
+  </footer>
+
+<script>
+  // Initialize or load saved data
+  let total = parseInt(localStorage.getItem('totalBots')) || 1000000;
+  let daily = parseInt(localStorage.getItem('dailyBots')) || 0;
+  let countries = parseInt(localStorage.getItem('countries')) || 25;
+  let lastCountryUpdate = localStorage.getItem('lastCountryUpdate') || Date.now();
+
+  const totalEl = document.getElementById("total");
+  const dailyEl = document.getElementById("daily");
+  const countryEl = document.getElementById("countries");
+  const countryListEl = document.getElementById("countryList");
+
+  const countryNames = [
+    "Sri Lanka", "India", "Pakistan", "Bangladesh", "Nepal", "Thailand",
+    "Indonesia", "Philippines", "Malaysia", "Singapore", "UAE", "Qatar",
+    "Oman", "Saudi Arabia", "Kuwait", "Egypt", "Kenya", "Nigeria",
+    "South Africa", "Turkey", "Russia", "UK", "Germany", "USA", "Canada"
+  ];
+
+  // Auto increase all counters
+  setInterval(() => {
+    total++;
+    daily++;
+    localStorage.setItem('totalBots', total);
+    localStorage.setItem('dailyBots', daily);
+    totalEl.textContent = total.toLocaleString();
+    dailyEl.textContent = daily.toLocaleString();
+  }, 1000);
+
+  // Country auto increment every 2 days
+  const now = Date.now();
+  if (now - lastCountryUpdate > 2 * 24 * 60 * 60 * 1000) {
+    countries++;
+    if (countries > 50) countries = 50;
+    localStorage.setItem('countries', countries);
+    localStorage.setItem('lastCountryUpdate', now);
+  }
+
+  countryEl.textContent = countries;
+  countryListEl.innerHTML = countryNames.slice(0, countries).join(" • ");
+
+  totalEl.textContent = total.toLocaleString();
+  dailyEl.textContent = daily.toLocaleString();
+</script>
+</body>
+</html>
